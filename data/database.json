@@ -11,7 +11,7 @@
       "phoneNumber": "625-316-9882",
       "avatar": "https://cypress-realworld-app-svgs.s3.amazonaws.com/t45AiwidW.svg",
       "defaultPrivacyLevel": "public",
-      "balance": 9950000,
+      "balance": 9949900,
       "createdAt": "2019-08-27T23:47:05.637Z",
       "modifiedAt": "2020-05-21T11:02:22.857Z"
     },
@@ -26,7 +26,7 @@
       "phoneNumber": "537-041-4355",
       "avatar": "https://cypress-realworld-app-svgs.s3.amazonaws.com/qywYp6hS0U.svg",
       "defaultPrivacyLevel": "private",
-      "balance": 101805,
+      "balance": 101905,
       "createdAt": "2019-09-09T13:48:45.489Z",
       "modifiedAt": "2020-05-21T02:34:01.483Z"
     },
@@ -9855,6 +9855,18 @@
       "requestResolvedAt": "",
       "createdAt": "2019-06-27T22:24:04.794Z",
       "modifiedAt": "2020-05-21T04:58:44.494Z"
+    },
+    {
+      "id": "G7lzjMJhs",
+      "uuid": "79151c33-fb4c-4aac-a2da-364949f2193c",
+      "amount": 100,
+      "description": "Ramen noodle",
+      "receiverId": "qywYp6hS0U",
+      "senderId": "t45AiwidW",
+      "privacyLevel": "public",
+      "status": "complete",
+      "createdAt": "2022-01-12T15:46:53.966Z",
+      "modifiedAt": "2022-01-12T15:46:53.966Z"
     }
   ],
   "likes": [
@@ -9937,6 +9949,14 @@
       "transactionId": "SXHgQh46s7A",
       "createdAt": "2020-05-07T03:37:29.711Z",
       "modifiedAt": "2020-05-21T02:32:06.555Z"
+    },
+    {
+      "id": "HrBWe9-Ej",
+      "uuid": "4a45a8c0-837d-4287-b54e-56c145e86eca",
+      "userId": "t45AiwidW",
+      "transactionId": "G7lzjMJhs",
+      "createdAt": "2022-01-12T15:47:12.802Z",
+      "modifiedAt": "2022-01-12T15:47:12.802Z"
     }
   ],
   "comments": [
@@ -10029,6 +10049,15 @@
       "transactionId": "2BHqb4lfWmiA",
       "createdAt": "2019-11-07T07:03:42.068Z",
       "modifiedAt": "2020-05-21T06:06:10.434Z"
+    },
+    {
+      "id": "RclbNDW8b",
+      "uuid": "9b64a54f-0ff5-414e-b2a5-e9d8c647f24f",
+      "content": "tasty",
+      "userId": "t45AiwidW",
+      "transactionId": "G7lzjMJhs",
+      "createdAt": "2022-01-12T15:47:10.042Z",
+      "modifiedAt": "2022-01-12T15:47:10.042Z"
     }
   ],
   "notifications": [
@@ -10431,6 +10460,56 @@
       "isRead": false,
       "createdAt": "2019-10-19T20:50:49.292Z",
       "modifiedAt": "2020-05-21T21:00:50.192Z"
+    },
+    {
+      "id": "SkzjUYJJHb",
+      "uuid": "e84a4ee7-d2f6-47a8-adf3-b49e2d1d00c7",
+      "userId": "qywYp6hS0U",
+      "transactionId": "G7lzjMJhs",
+      "status": "received",
+      "isRead": false,
+      "createdAt": "2022-01-12T15:46:53.991Z",
+      "modifiedAt": "2022-01-12T15:46:53.991Z"
+    },
+    {
+      "id": "Jyo2sOBsuI",
+      "uuid": "dfc6be02-02f0-4db6-8236-c06c2c18616c",
+      "userId": "t45AiwidW",
+      "transactionId": "G7lzjMJhs",
+      "commentId": "RclbNDW8b",
+      "isRead": false,
+      "createdAt": "2022-01-12T15:47:10.047Z",
+      "modifiedAt": "2022-01-12T15:47:10.047Z"
+    },
+    {
+      "id": "xvulM-vpXr",
+      "uuid": "bd7afb0e-103d-4028-9242-608a1fad5136",
+      "userId": "qywYp6hS0U",
+      "transactionId": "G7lzjMJhs",
+      "commentId": "RclbNDW8b",
+      "isRead": false,
+      "createdAt": "2022-01-12T15:47:10.052Z",
+      "modifiedAt": "2022-01-12T15:47:10.052Z"
+    },
+    {
+      "id": "a4mBbkR0AY",
+      "uuid": "b8f7a365-5dc9-4048-bd93-5d0f79dbe391",
+      "userId": "t45AiwidW",
+      "transactionId": "G7lzjMJhs",
+      "likeId": "HrBWe9-Ej",
+      "isRead": false,
+      "createdAt": "2022-01-12T15:47:12.807Z",
+      "modifiedAt": "2022-01-12T15:47:12.807Z"
+    },
+    {
+      "id": "eGLmUppj95",
+      "uuid": "64926544-280b-4ad5-8ca9-0de953c39db5",
+      "userId": "qywYp6hS0U",
+      "transactionId": "G7lzjMJhs",
+      "likeId": "HrBWe9-Ej",
+      "isRead": false,
+      "createdAt": "2022-01-12T15:47:12.811Z",
+      "modifiedAt": "2022-01-12T15:47:12.811Z"
     }
   ],
   "banktransfers": [
