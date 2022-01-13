@@ -1,3 +1,5 @@
+const { v4: uuidv4 } = require("uuid");
+
 describe("payment", () => {
   it("user can make payment", () => {
     // login
@@ -8,13 +10,49 @@ describe("payment", () => {
     cy.findByRole("button", { name: /sign in/i }).click();
 
     // check account balance
-    // click on pay button
+    let oldBalance;
+    cy.get('[data-test="sidenav-user-balance"]').then(($balance) => (oldBalance = $balance.text()));
+
+    // click on new button
+    cy.findByRole("button", { name: /new/i }).click();
+
     // search for a user
+    cy.findByRole("textbox").type("devon becker");
+    cy.findByText(/devon becker/i).click();
+
     // enter amount and note and click pay
+    const paymentAmount = "5.00";
+    cy.findByPlaceholderText(/amount/i).type(paymentAmount);
+    const note = uuidv4();
+    cy.findByPlaceholderText(/add a note/i).type(note);
+    cy.findByRole("button", { name: /pay/i }).click();
+
     // return to transactions
+    cy.findByRole("button", { name: /return to transactions/i }).click();
+
     // go to personal payments (Mine)
+    cy.findByRole("tab", { name: /mine/i }).click();
+
     // clicks on payment
+    // element covered by header so force.
+    cy.findByText(note).click({ force: true });
+
     // verify if payment was made
+    cy.findByText(`-$${paymentAmount}`).should("be.visible");
+    cy.findByText(note).should("be.visible");
+
     // verify if payment amount was deducted
-  })
-})
+    cy.get('[data-test="sidenav-user-balance"]').then(($balance) => {
+      // regex explanation:
+      // /\$ replace the dollar sign
+      // |, and replace the comma
+      // /g and want to do that globally
+      // , "" via an empty string
+      const convertedOldBalance = parseFloat(oldBalance.replace(/\$|,/g, ""));
+      const convertedNewBalance = parseFloat($balance.text().replace(/\$|,/g, ""));
+
+      // check whether the difference is equal to the payment amount
+      expect(convertedOldBalance - convertedNewBalance).to.equal(parseFloat(paymentAmount));
+    });
+  });
+});
